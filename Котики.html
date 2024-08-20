@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котики</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            position: relative; /* Для позиционирования псевдоэлемента */
+        }
+
+        .gallery::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Котики/koshachi-lapki-sledy-10.png'); /* Укажите путь к изображению лапок */
+            background-size: cover; /* Или 'contain' в зависимости от ваших предпочтений */
+            background-repeat: no-repeat;
+            opacity: 0.1; /* Уровень прозрачности */
+            z-index: 0; /* Положение под контентом */
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            position: relative; /* Для правильного отображения контента над фоном */
+            z-index: 1; /* Положение над фоном */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card p {
+            padding: 0 10px 10px;
+            text-align: center;
+            color: #555;
+        }
+
+        .card button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 15px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .card button:hover {
+            background-color: #e6b800;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мир котиков!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы любим котиков и хотим делиться с вами их красотой и милостью!</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея котиков</h2>
+        <div class="gallery">
+            <div class="card">
+                <img src="Котики/Котик Шуся.jpg" alt="Котик 1">
+                <h3>Котик Шуся</h3>
+                <p>Шуся всегда мечтает о теплом доме, но пока его никто не заметил...</p>
+                <button onclick="window.open('https://www.donationalerts.com/r/kotiki2024website', '_blank')">Покормить</button>
+            </div>
+            <div class="card">
+                <img src="Котики/Котик Хрюша.jpg" alt="Котик 2">
+                <h3>Котик Хрюша</h3>
+                <p>Хрюша грустит, потому что его любимая игрушка потерялась в бескрайних просторах квартиры.</p>
+                <button onclick="window.open('https://www.donationalerts.com/r/kotiki2024website', '_blank')">Покормить</button>
+            </div>
+            <div class="card">
+                <img src="Котики/Котик Макс.jpg" alt="Котик 3">
+                <h3>Котик Макс</h3>
+                <p>Макс смотрит в окно, мечтая о приключениях, которые никогда не произойдут.</p>
+                <button onclick="window.open('https://www.donationalerts.com/r/kotiki2024website', '_blank')">Покормить</button>
+            </div>
+            <div class="card">
+                <img src="Котики/мурзик.jpg" alt="Котик 4">
+                <h3>Котик Мурзик</h3>
+                <p>Мурзик грустит, потому что его никто не хочет взять на руки.</p>
+                <button onclick="window.open('https://www.donationalerts.com/r/kotiki2024website', '_blank')">Покормить</button>
+            </div>
+            <div class="card">
+                <img src="Котики/луна.jpeg" alt="Котик 5">
+                <h3>Котик Луна</h3>
+                <p>Луна мечтает о звездах, но ей не хватает тепла и любви.</p>
+                <button onclick="window.open('https://www.donationalerts.com/r/kotiki2024website', '_blank')">Покормить</button>
+            </div>
+            <div class="card">
+                <img src="Котики/Пухляш.jpg" alt="Котик 6">
+                <h3>Котик Пухляш</h3>
+                <p>Пухляш всегда сидит один, надеясь, что кто-то его заметит.</p>
+                <button onclick="window.open('https://www.donationalerts.com/r/kotiki2024website', '_blank')">Покормить</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами: <a href="mailto:info@kotiki.ru">info@kotiki.ru</a></p>
+        <p>Поддержите наш проект: <a href="https://www.donationalerts.com/r/kotiki2024website" target="_blank">Донат</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Котики. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Здесь можно добавить интерактивные элементы в будущем
+        console.log("Сайт про котиков загружен!");
+    </script>
+</body>
+</html>
